@@ -1,8 +1,8 @@
-const Skill = ({ name, votes }) => {
+const Skill = ({ name, counter }) => {
   return (
     <li>
       {name}
-      <span className="votes">{votes}</span>
+      <span className="votes">{counter}</span>
     </li>
   );
 };

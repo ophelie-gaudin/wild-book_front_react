@@ -1,7 +1,7 @@
 import blank_profile from "../assets/blank_profile.png";
 import SkillsList from "./SkillsList";
 
-const WilderCard = ({ name, skills }) => {
+const WilderCard = ({ name, upvotes, city }) => {
   return (
     <article className="card">
       <img src={blank_profile} alt="Jane Doe Profile" />
@@ -12,7 +12,7 @@ const WilderCard = ({ name, skills }) => {
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat.
       </p>
-      <SkillsList skills={skills} />
+      <SkillsList upvotes={upvotes} />
     </article>
   );
 };

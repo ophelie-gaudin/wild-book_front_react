@@ -1,18 +1,19 @@
 import Skill from "./Skill";
 
-const SkillsList = ({ skills }) => {
+const SkillsList = ({ upvotes }) => {
   return (
     <>
       <h4>Wild Skills</h4>
       <ul className="skills">
-        {skills.map((skill) => {
-          return <Skill name={skill.title} votes={skill.votes} />;
+        {upvotes.map((upvote) => {
+          return (
+            <Skill
+              key={upvote.id}
+              name={upvote.skill.name}
+              counter={upvote.counter}
+            />
+          );
         })}
-        <Skill name="HTML" votes="3" />
-        <Skill name="CSS" votes="3" />
-        <Skill name="TypeScript" votes="3" />
-        <Skill name="React" votes="3" />
-        <Skill name="Node" votes="3" />
       </ul>
     </>
   );
